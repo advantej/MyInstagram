@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface PhotosViewController : UIViewController <UITableViewDataSource>
+@interface PhotosViewController : UIViewController <UITableViewDataSource, UITableViewDelegate>
 
 @end

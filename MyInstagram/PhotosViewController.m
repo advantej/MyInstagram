@@ -9,6 +9,7 @@
 #import "PhotosViewController.h"
 #import "PhotosTableViewCell.h"
 #import "UIImageView+AFNetworking.h"
+#import "PhotoDetailsViewController.h"
 
 @interface PhotosViewController ()
 
@@ -27,8 +28,9 @@
 
 
     self.photosTableView.dataSource = self;
+    
+    self.photosTableView.delegate = self;
     self.photosTableView.rowHeight = 320;
-
     [self.photosTableView registerNib:[UINib nibWithNibName:@"PhotosTableViewCell" bundle:nil] forCellReuseIdentifier:@"PhotosCell"];
 
 
@@ -67,6 +69,16 @@
 
     return  photosTableViewCell;
 
+}
+
+- (void) tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+    [self.photosTableView deselectRowAtIndexPath:indexPath animated:YES];
+    PhotoDetailsViewController *pDetailsvc = [[PhotoDetailsViewController alloc] init];
+    pDetailsvc.photoDetailsDictionary = self.photosArray[indexPath.row] ;
+    
+    [self.navigationController pushViewController:pDetailsvc animated:YES];
+    
+    
 }
 
 /*
