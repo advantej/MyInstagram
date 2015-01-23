@@ -1,5 +1,5 @@
 //
-//  ViewController.h
+//  PhotosTableViewCell.h
 //  MyInstagram
 //
 //  Created by Tejas Lagvankar on 1/22/15.
@@ -8,8 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ViewController : UIViewController
-
+@interface PhotosTableViewCell : UITableViewCell
+@property (weak, nonatomic) IBOutlet UIImageView *instaPhotoView;
 
 @end
-
