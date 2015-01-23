@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4DF99A561A71FE0C00C715C2 /* PhotoDetailsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4DF99A541A71FE0C00C715C2 /* PhotoDetailsViewController.m */; };
+		4DF99A571A71FE0C00C715C2 /* PhotoDetailsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4DF99A551A71FE0C00C715C2 /* PhotoDetailsViewController.xib */; };
 		8B3811A01A71F2730086BC4D /* PhotosViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8B38119E1A71F2730086BC4D /* PhotosViewController.m */; };
 		8B3811A11A71F2730086BC4D /* PhotosViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8B38119F1A71F2730086BC4D /* PhotosViewController.xib */; };
 		8B3811A51A71F5BD0086BC4D /* PhotosTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 8B3811A31A71F5BD0086BC4D /* PhotosTableViewCell.m */; };
@@ -31,6 +33,9 @@
 
 /* Begin PBXFileReference section */
 		0C6EE45D3008B5914E0DE560 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
+		4DF99A531A71FE0C00C715C2 /* PhotoDetailsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PhotoDetailsViewController.h; sourceTree = "<group>"; };
+		4DF99A541A71FE0C00C715C2 /* PhotoDetailsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PhotoDetailsViewController.m; sourceTree = "<group>"; };
+		4DF99A551A71FE0C00C715C2 /* PhotoDetailsViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PhotoDetailsViewController.xib; sourceTree = "<group>"; };
 		8B38119D1A71F2730086BC4D /* PhotosViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PhotosViewController.h; sourceTree = "<group>"; };
 		8B38119E1A71F2730086BC4D /* PhotosViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PhotosViewController.m; sourceTree = "<group>"; };
 		8B38119F1A71F2730086BC4D /* PhotosViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PhotosViewController.xib; sourceTree = "<group>"; };
@@ -104,6 +109,9 @@
 				8B3811A21A71F5BD0086BC4D /* PhotosTableViewCell.h */,
 				8B3811A31A71F5BD0086BC4D /* PhotosTableViewCell.m */,
 				8B3811A41A71F5BD0086BC4D /* PhotosTableViewCell.xib */,
+				4DF99A531A71FE0C00C715C2 /* PhotoDetailsViewController.h */,
+				4DF99A541A71FE0C00C715C2 /* PhotoDetailsViewController.m */,
+				4DF99A551A71FE0C00C715C2 /* PhotoDetailsViewController.xib */,
 			);
 			path = MyInstagram;
 			sourceTree = "<group>";
@@ -234,6 +242,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				8B3811A61A71F5BD0086BC4D /* PhotosTableViewCell.xib in Resources */,
+				4DF99A571A71FE0C00C715C2 /* PhotoDetailsViewController.xib in Resources */,
 				8B3811A11A71F2730086BC4D /* PhotosViewController.xib in Resources */,
 				8B5863CD1A71F02F00B529CA /* LaunchScreen.xib in Resources */,
 				8B5863CA1A71F02F00B529CA /* Images.xcassets in Resources */,
@@ -291,6 +300,7 @@
 				8B5863C21A71F02F00B529CA /* AppDelegate.m in Sources */,
 				8B3811A01A71F2730086BC4D /* PhotosViewController.m in Sources */,
 				8B5863BF1A71F02F00B529CA /* main.m in Sources */,
+				4DF99A561A71FE0C00C715C2 /* PhotoDetailsViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
