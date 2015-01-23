@@ -16,6 +16,8 @@
 @property (strong, nonatomic) NSArray *photosArray;
 @property (weak, nonatomic) IBOutlet UITableView *photosTableView;
 
+@property (nonatomic, strong) UIRefreshControl *refreshControl;
+
 @end
 
 @implementation PhotosViewController
@@ -34,6 +36,11 @@
     [self.photosTableView registerNib:[UINib nibWithNibName:@"PhotosTableViewCell" bundle:nil] forCellReuseIdentifier:@"PhotosCell"];
 
 
+    self.refreshControl = [[UIRefreshControl alloc] init];
+    [self.refreshControl addTarget:self action:@selector(onRefresh) forControlEvents:UIControlEventValueChanged];
+    [self.photosTableView insertSubview:self.refreshControl atIndex:0];
+
+
     NSURL *url = [NSURL URLWithString:@"https://api.instagram.com/v1/media/popular?client_id=0b9a9c9e042d4289b74ce07c5403a7d1"];
     NSURLRequest *urlRequest = [NSURLRequest requestWithURL:url];
 
@@ -43,6 +50,23 @@
         self.photosArray = responseDictionary[@"data"];
 
         [self.photosTableView reloadData];
+    }];
+
+
+}
+
+- (void)onRefresh {
+    NSURL *url = [NSURL URLWithString:@"https://api.instagram.com/v1/media/popular?client_id=0b9a9c9e042d4289b74ce07c5403a7d1"];
+    NSURLRequest *urlRequest = [NSURLRequest requestWithURL:url];
+
+    [NSURLConnection sendAsynchronousRequest:urlRequest queue:[NSOperationQueue mainQueue] completionHandler:^(NSURLResponse *response, NSData *data, NSError *connectionError) {
+        NSDictionary *responseDictionary = [NSJSONSerialization JSONObjectWithData:data options:0 error:nil];
+        NSLog(@"response: %@", responseDictionary);
+        self.photosArray = responseDictionary[@"data"];
+
+        [self.photosTableView reloadData];
+
+        [self.refreshControl endRefreshing];
     }];
 
 
