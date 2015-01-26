@@ -13,16 +13,16 @@
                 <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" id="Xz6-nI-mPL">
-                        <rect key="frame" x="4" y="3" width="312" height="311.5"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" id="Xz6-nI-mPL">
+                        <rect key="frame" x="8" y="8" width="304" height="303.5"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                     </imageView>
                 </subviews>
             </tableViewCellContentView>
             <connections>
                 <outlet property="instaPhotoView" destination="Xz6-nI-mPL" id="JiW-uk-4dx"/>
             </connections>
-            <point key="canvasLocation" x="389" y="251"/>
+            <point key="canvasLocation" x="220" y="298"/>
         </tableViewCell>
     </objects>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
